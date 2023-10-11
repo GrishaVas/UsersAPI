@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UsersAPI</name>
+    </assembly>
+    <members>
+        <member name="M:UsersAPI.Controllers.UsersController.Get(System.Int32,System.Int32)">
+            <summary>
+            Get Users with offset and limit or without params.
+            </summary>
+            <param name="offset"></param>
+            <param name="limit"></param>
+            <remarks>If "offset" and "limit" equals 0 returns all users, else returns range with offset and limit.</remarks>
+        </member>
+        <member name="M:UsersAPI.Controllers.UsersController.Get(System.Int32)">
+            <summary>
+            Get one User.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            <remarks>Returns one user by "id".</remarks>
+        </member>
+        <member name="M:UsersAPI.Controllers.UsersController.Sort(System.String,System.Int32)">
+            <summary>
+            Sorted Users.
+            </summary>
+            <param name="prop"></param>
+            <param name="order"></param>
+            <returns></returns>
+            <remarks>Returns sorted users by property:"prop", order = 1 - sort ascending, order = -1 - sort descending.</remarks>
+        </member>
+        <member name="M:UsersAPI.Controllers.UsersController.Filter(System.String,System.String)">
+            <summary>
+            Filter Users.
+            </summary>
+            <param name="prop"></param>
+            <param name="value"></param>
+            <returns></returns>
+            <remarks>Returns filtered users by property:"prop" and "value".</remarks>
+        </member>
+        <member name="M:UsersAPI.Controllers.UsersController.Post(UsersAPI.Models.Business.User)">
+            <summary>
+            Add User.
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+            <remarks>Adds user if users with "id" and "email" don`t exist and all properties are correct.</remarks>
+        </member>
+        <member name="M:UsersAPI.Controllers.UsersController.AddRole(System.Int64,UsersAPI.Models.Business.Role)">
+            <summary>
+            Add Role to User by id.
+            </summary>
+            <param name="id"></param>
+            <param name="role"></param>
+            <returns></returns>
+            <remarks>Adds role to user if user with "id" exists and roles name is correct.</remarks>
+        </member>
+        <member name="M:UsersAPI.Controllers.UsersController.Put(System.Int32,UsersAPI.Models.Business.User)">
+            <summary>
+            Change User.
+            </summary>
+            <param name="id"></param>
+            <param name="user"></param>
+            <returns></returns>
+            <remarks>Changes user if user with "id" exists and new users properties are correct.</remarks>
+        </member>
+        <member name="M:UsersAPI.Controllers.UsersController.Delete(System.Int32)">
+            <summary>
+            Delete User by id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            <remarks>Delets user whit "id".</remarks>
+        </member>
+        <member name="M:UsersAPI.Controllers.UsersController.GetToken(System.String)">
+            <summary>
+            Get Authorization token.
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+            <remarks>Returns token generated with users name.</remarks>
+        </member>
+        <member name="T:UsersAPI.Migrations.First">
+            <inheritdoc />
+        </member>
+        <member name="M:UsersAPI.Migrations.First.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:UsersAPI.Migrations.First.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:UsersAPI.Migrations.First.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:UsersAPI.Migrations.Second">
+            <inheritdoc />
+        </member>
+        <member name="M:UsersAPI.Migrations.Second.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:UsersAPI.Migrations.Second.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:UsersAPI.Migrations.Second.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
